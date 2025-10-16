@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    header {
+      min-height: 100vh;
+      position: relative;
+      background: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url("./img2.png");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    nav.container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background: transparent;
+      backdrop-filter: blur(200px);
+      gap: 1rem;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .parent-link {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 600;
+      animation: fadeInUp 1s forwards;
+      animation-delay: 0.3s;
+    }
+
+    .social-links {
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .social-links::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #34e7e4;
+      transition: width 0.3s ease;
+    }
+
+    .social-links:hover {
+      color: #34e7e4;
+    }
+
+    .social-links:hover::after {
+      width: 100%;
+    }
+
+    .icon {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .sm-icon {
+      font-size: 1.4rem;
+      color: white;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .sm-icon:hover {
+      transform: scale(1.2);
+      color: #34e7e4;
+    }
+
+    .header-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      animation: fadeInUp 1s forwards;
+      animation-delay: 0.6s;
+      opacity: 0;
+    }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      animation: fadeInUp 1s forwards;
+      animation-delay: 0.9s;
+      opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ✅ Tablet (768px) */
+    @media (max-width: 768px) {
+      nav.container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .parent-link {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .icon {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .header-container {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    /* ✅ Mobile (max 480px) */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .sm-icon {
+        font-size: 1.2rem;
+      }
+
+      .parent-link {
+        flex-direction: column;
+      }
+
+      .icon {
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo-box">
+        <img src="./img1.jpg" class="logo" alt="Your Picture" />
+      </div>
+      <div class="parent-link">
+        <a href="aboutme.html" class="social-links">About Me</a>
+        <a href="hobbies.html" class="social-links">Hobbies</a>
+        <a href="edback.html" class="social-links">Educational Background</a>
+        <a href="contact.html" class="social-links">Contact Me</a>
+      </div>
+      <div class="icon">
+        <a href="https://instagram.com/" target="_blank" class="sm-icon">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://facebook.com/" target="_blank" class="sm-icon">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="https://github.com/" target="_blank" class="sm-icon">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank" class="sm-icon">
+          <ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="sm-icon">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </div>
+    </nav>
+
+    <div class="header-container">
+      <h1>A Frontend Developer that creates free quality content</h1>
+     <p>
+  Hi, I'm <b>Comisas, Michael</b>. A frontend developer passionate about web
+  design and development. I enjoy crafting user-friendly, responsive, and visually
+  engaging websites. I believe in continuous learning and love experimenting with
+  new technologies to bring ideas to life. 
+</p>
+
+      
+    </div>
+  </header>
+
+  <!-- Icons JS -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

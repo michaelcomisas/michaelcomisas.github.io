@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educational Background</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("./img2.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .edu-container {
+      width: 100%;
+      max-width: 1000px;
+      height: 90vh;
+      padding: 2rem;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(12px);
+      animation: fadeInScale 1.2s ease forwards;
+      transform: scale(0.9);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      gap: 1rem;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #34e7e4, #00cec9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideDown 1s ease forwards;
+      opacity: 0;
+    }
+
+    .back-btn {
+      align-self: flex-start;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #34e7e4;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      animation: fadeInUp 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    .back-btn:hover {
+      color: #00cec9;
+      text-decoration: underline;
+    }
+
+    .timeline {
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .timeline::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .timeline::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+
+    .timeline::-webkit-scrollbar-thumb {
+      background: #34e7e4;
+      border-radius: 10px;
+    }
+
+    .timeline::-webkit-scrollbar-thumb:hover {
+      background: #00cec9;
+    }
+
+    .entry {
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .entry:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .entry h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #34e7e4;
+    }
+
+    .entry p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    @keyframes fadeInScale {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      0% { transform: translateY(-40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* ✅ Tablet (Medium screen) */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .entry h2 {
+        font-size: 1.2rem;
+      }
+
+      .entry p {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* ✅ Mobile */
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+
+      .edu-container {
+        padding: 1.5rem;
+        height: auto;
+        max-height: 90vh;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        text-align: center;
+        width: 100%;
+      }
+
+      .header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+
+      .back-btn {
+        font-size: 0.95rem;
+        align-self: flex-start;
+      }
+
+      .entry {
+        padding: 15px;
+      }
+
+      .entry h2 {
+        font-size: 1.1rem;
+      }
+
+      .entry p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="edu-container">
+    <div class="header">
+      <a href="index.html" class="back-btn">← Back</a>
+      <h1>Educational Background</h1>
+    </div>
+
+    <div class="timeline">
+      <div class="entry">
+        <h2>Elementary School</h2>
+        <p>In year 2016-2017 I completed my elementary education in Kono Mais Elementary School with a strong foundation in academics and active participation in school activities.</p>
+      </div>
+
+      <div class="entry">
+        <h2>High School</h2>
+        <p>My high school days before I graduated in year 2020-2021 Canatuan National High School there are many unforgettable memories — from making lifelong friends, joining school events, and enjoying simple moments inside the classroom. These years taught me the value of camaraderie, discipline, and creating lasting experiences beyond academics.</p>
+      </div>
+
+      <div class="entry">
+        <h2>Senior High School (TVL - Agriculture Strand)</h2>
+        <p>For my Senior High School, I studied at Canatuan National High School where I took the Technical-Vocational-Livelihood (TVL) Agriculture Strand. This track enhanced my knowledge in farming, agricultural practices, and hands-on learning, giving me practical skills and preparing me both for work and higher education.</p>
+      </div>
+
+      <div class="entry">
+        <h2>College</h2>
+        <p>Currently studying Computer Science, gaining strong knowledge in web design and development, and continuously improving my skills in programming and modern technologies.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
